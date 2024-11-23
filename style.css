@@ -1,0 +1,225 @@
+body{
+    background-color: rgb(149, 215, 223);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container{
+    width: 97.5vw;
+    height: 300vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr 2fr 2fr 2fr 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr; 
+    grid-template-areas:
+    ' a a a a a a '
+    ' b b b b b b'
+    ' c c c c c c '
+    ' c c c c c c '
+    ' c c c c c c ' 
+    ' c c c c c c '
+    ' d d d d d d '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' e e e e e e '
+    ' f f f f f f '
+    ;
+    gap: 2px;
+}
+
+.box{
+    border: solid black 1px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box1{
+    grid-area: a;
+    background-color: rgb(149, 215, 223);
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+.box1 img{
+    width: 5%;
+    height: 90%;
+}
+
+.box1 .title{
+    font-size: 1.5rem;
+}
+
+.box2{
+    grid-area: b;
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    border: 2px black solid;
+}
+
+.box2 .nav-button{
+    width: 100%;
+    height: 100%;
+    border: 2px black solid;
+    transition: 1s;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-button:hover{
+    transform: scale(1.2);
+    border: none;
+    cursor: pointer;
+}
+
+.box2 img{
+    width: 7.5%;
+    height: 90%;
+}
+
+.box3-4{
+    grid-area: c;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box3{
+    width: 69.8%;
+    height: 100%;
+    background-color: green;
+    flex-direction: column;
+    font-size: 3vw;
+    gap: 0.5vw;
+}
+
+.box3 :first-child{
+    font-size: 6vw;
+}
+
+.box4{
+    width: 29.8%;
+    height: 100%;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.box4 .visit-us{
+    position: absolute;
+    top: 3%;
+    font-size: 5vw;
+    color: yellow;
+}
+
+.hero-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box5{
+    grid-area: e;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: orange;
+    gap: 2vw;
+}
+
+.box5 .product{
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+.product:hover{
+    transform: scale(1.1);
+    border: none;
+    cursor: pointer;
+}
+
+.box5 img{
+    width: 25vw;
+    height: 30vw;
+    border: solid 2px red;
+    border-radius: 5px;
+}
+
+.box6{
+    grid-area: f;
+    background-color: rgb(149, 215, 223);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: none;
+    transition: 1s;
+    gap: 2vw;
+}
+
+.box6 a{
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1.03);
+}
+
+.box7{
+    grid-area: d;
+    background-color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#products-section{
+    color: purple;
+    font-size: 3vw;
+}
+
+.grid-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (width <= 870px){
+    .grid-container{
+        height: 230vh;
+    }
+
+    .box3{
+        width: 100%;
+        height: 5%;
+        flex-direction: row;
+        font-size: 1.5vw;
+        gap: 5vw;
+    }
+
+    .box3 :first-child{
+        font-size: 3vw;
+    }
+
+    .box4{
+        height: 95%;
+        width: 100%;
+    }
+
+    .box5 img{
+        width: 35vw;
+        height: 45vw;
+    }
+}
